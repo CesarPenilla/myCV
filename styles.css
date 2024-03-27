@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     color: blue;
-    background-color: beige;
+    background-color: antiquewhite;
 }
 
 img {
@@ -12,35 +12,67 @@ img {
     margin: 10px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
 #contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 20px;
+    min-width: 400px;
 }
 
 #datos-basicos {
     display: flex;
-    width: 80%;
-    height: 180px;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
     max-width: 800px;
+}
+
+@media (max-width: 600px) {
+    #datos-basicos {
+        flex-direction: column;
+    }
 }
 
 #datos p span {
     font-weight: bold;
 }
 
-/* #habilidades {
-    font-family: 'Times New Roman', sans-serif;
-    font-size: medium;
+#secciones {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 800px;
 }
 
-.texto-basico {
-    font-family: Calibri, sans-serif;
-    font-size: medium;
-} */
+@media (max-width: 800px) {
+    #secciones {
+        flex-direction: column;
+    }
+}
+
+#seccion-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.textos {
+    text-align: justify;
+}
+
+.contornos {
+    border-radius: 7px;
+    border: 1px solid #00aaff;
+    padding: 10px;
+    margin: 5px;
+}
+
+.fondos {
+    background: url(paper.gif);
+    background-position: left top;
+    background-repeat: repeat;
+}
